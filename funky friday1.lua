@@ -14,9 +14,9 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Funky Friday Dev Tools"})
  
 local Tab = Window:MakeTab({
-	Name = "Tools",
+	Name = "Scripts",
 	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
+	PremiumOnly = false
 })
  
 local Tab2 = Window:MakeTab({
@@ -24,11 +24,10 @@ local Tab2 = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab2:AddLabel("Developers On The Script are")
-Tab2:AddLabel("Warcoes#7514 (Euricoe on v3rmillion)")
-Tab2:AddLabel("troy#0666 (NetBox on v3rmillion)")
-Tab2:AddLabel("\\#4264 (IAmAGoodScammer on v3rmillion)")
-Tab2:AddLabel("Only Premuim user :)")
+Tab2:AddLabel("People That Helped In Some Way")
+Tab2:AddLabel("DivineCrimZ Script Developer")
+Tab2:AddLabel("NetBox Script Developer")
+Tab2:AddLabel("Revy#5050 Moral Support (spam add him)")
 
 Tab:AddButton({
 	Name = "Destroy GUI",
@@ -38,56 +37,26 @@ Tab:AddButton({
 })
 
 Tab:AddLabel("-----Features Below-----")
+Tab:AddLabel("2 accounts needed for winstreak farm")
 
 Tab:AddButton({
-	Name = "AUTOFARM [NEW]",
+	Name = "Winstreak Farm Left",
 	Callback = function()
-       	while true do
-for i,k in pairs(game:GetService("Workspace").Map.Stages:GetDescendants()) do
-   if k.Parent.Name == ("Pads") and k.BrickColor.Name == ("Institutional white") then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(k.Position)
-   end
-end
-task.wait(0.2)
-local vs = game:GetService("VirtualUser")
-for i,v in pairs(game:GetService("Workspace").Map.Stages:GetDescendants()) do
-   if v:IsA("ProximityPrompt") then
-       v.HoldDuration = 0
-   end
-end
-vs:SetKeyDown("e")
-wait()
-vs:SetKeyUp("e")
-wait(5)
+       	loadstring(game:HttpGet("https://pastebin.com/raw/nX41rkE6",true))()
+  	end    
+})
 
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "StageManager",
-        [3] = "Select"
-    },
-    [2] = {
-        [1] = "VSCamellia_Ghost",
-        [2] = "Mania"
-    }
-}
+Tab:AddButton({
+	Name = "Winstreak Farm Right",
+	Callback = function()
+       	loadstring(game:HttpGet("https://pastebin.com/raw/bLDsifeA",true))()
+  	end    
+})
 
-game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
-
-wait(5)
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "StageManager",
-        [3] = "PlaySolo"
-    },
-    [2] = {}
-}
-
-game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
-
-wait(360)
-end
+Tab:AddButton({
+	Name = "Points Farm",
+	Callback = function()
+       	loadstring(game:HttpGet("https://pastebin.com/raw/7xrgtv6z",true))()
   	end    
 })
 
@@ -101,251 +70,28 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Admin Animation (aus_si)",
 	Callback = function()
-        local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "BuyItem"
-    },
-    [2] = {
-        [1] = "MoveSets",
-        [2] = "aus_si"
-    }
-}
- 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+        loadstring(game:HttpGetAsync("https://pastebin.com/raw/wAi5N9Yh", true))()
   	end    
 })
  
 Tab:AddButton({
 	Name = "Content Creator Mic",
 	Callback = function()
-      	local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "BuyItem"
-    },
-    [2] = {
-        [1] = "Microphones",
-        [2] = "ContentCreator"
-    }
-}
- 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+      	loadstring(game:HttpGetAsync("https://pastebin.com/raw/VENcgJVr", true))()
   	end    
 })
 
 Tab:AddButton({
 	Name = "Give Boss Mics",
 	Callback = function()
-      	local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "BuyItem"
-    },
-    [2] = {
-        [1] = "Microphones",
-        [2] = "AnimMic"
-    }
-}
- 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
- 
-wait(1)
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "BuyItem"
-    },
-    [2] = {
-        [1] = "Microphones",
-        [2] = "AnimMicEmpowered"
-    }
-}
- 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+      	loadstring(game:HttpGetAsync("https://pastebin.com/raw/dQBRhwTk", true))()
   	end    
 })
  
 Tab:AddButton({
 	Name = "Redeem All Codes",
 	Callback = function()
-       	local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "XMAS2021"
-    }
-}
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "19DOLLAR"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "100M"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "1MILFAVS"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "250M"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "smashthatlikebutton"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "Halfbillion"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "100kactive"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "MILLIONLIKES"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "9keyishere"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "1BILCHEESE"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "CHEEZEDTOMEETYOU"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "2v2!!"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "1YEARFUNKY"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-local args = {
-    [1] = {
-        [1] = "Server",
-        [2] = "RequestCode"
-    },
-    [2] = {
-        [1] = "1YEARSCOOP"
-    }
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+       	loadstring(game:HttpGetAsync("https://pastebin.com/raw/HisbjQMD", true))()
   	end    
 })
 OrionLib:Init()
